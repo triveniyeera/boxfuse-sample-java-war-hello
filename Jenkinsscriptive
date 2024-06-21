@@ -6,7 +6,7 @@ node {
     remote.allowAnyHosts = true
 
     stage('GIT checkout') {
-        checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/RAJANI9/boxfuse-sample-java-war-hello.git']]]
+        checkout scm: [$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/RAJANI9/boxfuse-sample-java-war-hello.git']]]
     }
 
     stage('Build') {

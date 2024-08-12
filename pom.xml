@@ -7,11 +7,11 @@
     <version>1.0</version>
     <name>hello</name>
     <url>https://github.com/boxfuse/boxfuse-sample-java-war-hello</url>
-         
+
     <properties>
         <docker.image.prefix>kammana</docker.image.prefix>
         <sonar.host.url>http://65.2.9.64:9000/</sonar.host.url>
-        <sonar.login>squ_16f94fe9bc1c6774f859d54828b666c5e1e064f6</sonar.login>  
+        <sonar.login>squ_16f94fe9bc1c6774f859d54828b666c5e1e064f6</sonar.login>
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -52,4 +52,17 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>nexusRepo</id>
+            <name>Nexus Releases</name>
+            <url>http://13.232.89.140:8081/repository/sample-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexusRepo</id>
+            <name>Nexus Snapshot</name>
+            <url>http://13.232.89.140:8081/repository/sample-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
